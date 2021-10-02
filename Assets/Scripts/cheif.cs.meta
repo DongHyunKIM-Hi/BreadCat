@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 109d112b155bb654b8dad337f4f25bd9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cheif_check: {fileID: 7400000, guid: 6a6651a9d49bae74395dd13277a5528b, type: 2}
+  - anim: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
