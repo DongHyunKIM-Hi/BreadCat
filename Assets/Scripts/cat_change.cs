@@ -10,14 +10,15 @@ public class cat_change : MonoBehaviour
     void Awake()
     {
         cat = this;
+        this.state = "µµµœ≥…¿Ã";
     }
 
     private void OnMouseDown()
     {
         
         SpriteRenderer spriteR = gameObject.GetComponent<SpriteRenderer>();
-        Sprite[] sprites = Resources.LoadAll<Sprite>("Sprites/Images/cat");
-        spriteR.sprite = sprites[3];
+        Sprite[] sprites = Resources.LoadAll<Sprite>("Sprites/Images/bread_cat");
+        spriteR.sprite = sprites[gameManager.I.Rank];
         state = "Ωƒªß≥…¿Ã";
         gameManager.I.combo = 0;
         gameManager.I.comboText.text = gameManager.I.combo.ToString();

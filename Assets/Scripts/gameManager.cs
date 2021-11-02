@@ -13,6 +13,8 @@ public class gameManager : MonoBehaviour
 
     public Text comboText;
 
+    public int Rank = 0;
+
     public int totalScore = 0;
 
     public int combo = 0;
@@ -25,7 +27,7 @@ public class gameManager : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("checking", 0, 5f);
+        InvokeRepeating("checking", 0, 1f);
     }
 
     // Update is called once per frame
@@ -36,14 +38,20 @@ public class gameManager : MonoBehaviour
 
     void checking()
     {
-        cheif.cooker.animationStart();
+        int rand = 1;
+        if (rand == Random.Range(1, 5))
+        {
+            cheif.cooker.animationStart();
+        }
     }
 
     public void addScore()
     {
+        Rank = combo / 10;
         combo += 1;
         totalScore += combo;
         comboText.text = combo.ToString();
         scoreText.text = totalScore.ToString();
+        Debug.Log(Rank);
     }
 }
